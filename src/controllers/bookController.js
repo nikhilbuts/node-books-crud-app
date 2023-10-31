@@ -22,6 +22,7 @@ const BookController = {
     }
   },
   async getBookList(req, res, next) {
+    debugger;
     const page = parseInt(req.query.page, 10) || 1;
     const limit = parseInt(req.query.limit, 10) || 10;
     const searchQuery = req.query.q || "";
@@ -37,11 +38,7 @@ const BookController = {
         ],
       };
 
-      const books = await BookModel.find(
-        searchCriteria,
-        { isDeleted: false },
-        "-__v"
-      )
+      const books = await BookModel.find(searchCriteria, "-isDeleted -__v")
         .skip(skip)
         .limit(limit);
 
@@ -64,8 +61,9 @@ const BookController = {
     }
   },
   async dogetBook(req, res, next) {
+    debugger;
     const bookId = req.params.id;
-
+    debugger;
     if (!mongoose.Types.ObjectId.isValid(bookId)) {
       return res.status(400).json({ error: "Invalid book ID" });
     }
