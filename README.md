@@ -43,7 +43,7 @@ This is a Node.js RESTful API for managing books. It provides CRUD operations fo
 - **Description:** Delete a book by its ID.
 - **URL Parameter:** id (required): The unique ID of the book.
 
-Setup and Local Development
+### Setup and Local Development
 
 1. Clone the repository:
 
@@ -79,7 +79,7 @@ Setup and Local Development
 6. Please access the API at http://localhost:3000.
 
 
-Decisions and Assumptions
+### Decisions and Assumptions
 
 - I assumed a basic authentication mechanism using JSON Web Tokens (JWT) for user registration and login. You can extend this for more advanced user management.
 - The API includes pagination and search functionality for listing books.
