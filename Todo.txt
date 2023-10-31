@@ -1,0 +1,1 @@
+in last login isdeleted Flag Condition
