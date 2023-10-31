@@ -1,5 +1,4 @@
-# node-books-crud-app
-# Node.js Book Management API
+# Book Management API
 
 This is a Node.js RESTful API for managing books. It provides CRUD operations for books and utilizes MongoDB as the database.
 
